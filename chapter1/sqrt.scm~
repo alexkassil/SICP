@@ -1,4 +1,5 @@
 (define (sqrt-iter guess x)
+  (display guess) (newline)
   (if (good-enough? guess x)
       guess
       (sqrt-iter (improve guess x)
@@ -16,14 +17,15 @@
 (define (sqrt x)
   (sqrt-iter 1.0 x))
 
-(define (small-number-good-enough? guess x)
-  (< (abs (- (square guess) x)) (/ 0.001 x)))
+(define (better-good-enough? guess x)
+  (< (abs (- (square (improve guess x)) x)) 1.0e-5))
 
-(define (small-number-sqrt-iter guess x)
-  (if (small-number-good-enough? guess x)
+(define (better-sqrt-iter guess x)
+  (display (- (square (improve guess x)) x)) (newline)
+  (if (better-good-enough? guess x)
       guess
-      (sqrt-iter (improve guess x)
+      (better-sqrt-iter (improve guess x)
 		 x)))
 
-(define (small-sqrt x)
-  (small-number-sqrt-iter 1.0 x))
+(define (better-sqrt x)
+  (better-sqrt-iter 1.0 x))
