@@ -1,5 +1,4 @@
 (define (sqrt-iter guess x)
-  (display guess) (newline)
   (if (good-enough? guess x)
       guess
       (sqrt-iter (improve guess x)
@@ -18,10 +17,9 @@
   (sqrt-iter 1.0 x))
 
 (define (better-good-enough? guess x)
-  (< (abs (- (square (improve guess x)) x)) 1.0e-5))
+  (< (abs (- (improve guess x) guess)) 0.0001))
 
 (define (better-sqrt-iter guess x)
-  (display (- (square (improve guess x)) x)) (newline)
   (if (better-good-enough? guess x)
       guess
       (better-sqrt-iter (improve guess x)
