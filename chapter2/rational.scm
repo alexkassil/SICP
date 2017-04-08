@@ -43,6 +43,16 @@
 ;;; Other useful functions
 
 ;; Equality
-
 (define (equal-rat? x y)
   (= (* (numer x) (denom y)) (* (numer y) (denom x))))
+
+;; Simplify
+(define (simplify x)
+  (define z (gcd (numer x) (denom x)))
+  (make-rat (/ (numer x) z) (/ (denom x) z)))
+
+;; GCD
+(define (gcd x y)
+  (if (= 0 b)
+      a
+      (gcd b (mod a b))))
