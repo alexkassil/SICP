@@ -53,6 +53,6 @@
 
 ;; GCD
 (define (gcd x y)
-  (if (= 0 b)
-      a
-      (gcd b (mod a b))))
+  (if (= 0 y)
+      x
+      (gcd y (modulo x y))))
