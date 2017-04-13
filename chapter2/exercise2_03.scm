@@ -72,7 +72,17 @@
   (make-point (x-point (car rect)) (y-point (cdr rect))))
 
 
+;; Perimiter
 
+(define (perim rect)
+  (+ (* 2 (abs (- (x-point (rect-p1 rect)) (x-point (rect-p3 rect)))))
+     (* 2 (abs (- (y-point (rect-p1 rect)) (y-point (rect-p3 rect)))))))
+
+;; Area
+
+(define (area rect)
+  (* (abs (- (x-point (rect-p1 rect)) (x-point (rect-p3 rect))))
+     (abs (- (y-point (rect-p1 rect)) (y-point (rect-p3 rect))))))
 
 
 
