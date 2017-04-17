@@ -14,3 +14,15 @@
 	  next
 	  (try next))))
   (try first-guess))
+
+
+(fixed-point (lambda (x) (/ (log 1000) (log x))) 1.01)
+
+; Steps without average damping = 68
+
+(define (average x y)
+  (/ (+ x y) 2))
+
+(fixed-point (lambda (x) (average x (/ (log 1000) (log x)))) 1.01)
+
+; Steps with average damping = 16
