@@ -12,11 +12,13 @@
       (/ (N k) (+ (D k)
 		  (cont-frac N D (- k 1))))))
 
-; Approximates 1/phi to 4 decimal places (1.6180)
+; Approximates 1/phi to 4 decimal places (.6180)
 (cont-frac (lambda (i) 1.0)
 	   (lambda (i) 1.0)
-	   9)
+	   10))
 
+; Approximates phi to 4 decimal places (1.6180)
 (/ 1 (cont-frac (lambda (i) 1.0)
 		(lambda (i) 1.0)
 		11))
+
