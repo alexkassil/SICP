@@ -16,3 +16,5 @@
 	n
 	(3-iter (+ n 1) (/ current 3))))
   (3-iter 0 z))
+
+
