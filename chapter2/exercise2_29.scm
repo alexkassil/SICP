@@ -31,3 +31,22 @@
   (cond ((not (pair? mobile)) mobile)
 	(else (+ (total-weight (branch-structure (left-branch mobile)))
 		 (total-weight (branch-structure (right-branch mobile)))))))
+
+;; Balance check
+;; Returns true if all torques at each mobile are balanced
+
+(define (is-mobile? mobile)
+  (pair? mobile))
+
+(define (torque branch)
+  (* (total-weight (branch-structure branch)) (branch-length branch)))
+
+(define (balanced? mobile)
+  (let* ((left (left-branch mobile))
+	(right (right-branch mobile))
+	(left-struct (branch-structure left))
+	(right-struct (branch-structure right)))
+    (cond ((not (= (torque right) (torque left))) #f)
+	  ((is-mobile? left-struct) (balanced? left-struct))
+	  ((is-mobile? right-struct) (balanced? right-struct))
+	  (else #t))))
