@@ -20,3 +20,6 @@
 
 (define (union-set set1 set2)
   (append set1 set2))
+
+;;;; Union set is now O(1) instead of O(n^2)
+;;;; Append set is now O(1) instead of O(n)
