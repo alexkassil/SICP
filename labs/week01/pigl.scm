@@ -1,3 +1,9 @@
+(define (pigl-sent s)
+  (if (empty? s)
+	  '()
+	  (se (pigl (first s))
+		  (pigl-sent (bf s)))))
+
 (define (pigl wd)
   (if (pl-done? wd)
 	  (word wd 'ay)
@@ -7,4 +13,4 @@
   (vowel? (first wd)))
 
 (define (vowel? letter)
-  (member? letter '(a e i o u)))
+  (member? letter 'aeiou))
