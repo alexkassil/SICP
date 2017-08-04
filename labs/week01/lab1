@@ -1,0 +1,48 @@
+okay
+STk> (load "pigl.scm")
+okay
+STk> (pigl 'scheme)
+emeschay
+STk> (pigl 'alex)
+alexay
+STk> (pigl 'kassil)
+assilkay
+STk> (trace pigl)
+okay
+STk> (pigl 
+'scheme)
+.. -> pigl with wd = scheme
+.... -> pigl with wd = chemes
+...... -> pigl with wd = hemesc
+........ -> pigl with wd = eme
+ch
+........ <- pigl returns emeschay
+...... <- pigl returns emeschay
+.... <- pigl returns emeschay
+.. <- pigl returns emeschay
+emeschay
+STk> (pigl 'alex)
+.. -> pigl with wd = alex
+.. <- pigl returns alexay
+alexay
+STk> (pigl 'kassil)
+.. -> pigl with wd = kassil
+.... -> pigl with wd = assilk
+.... <- pigl returns assilkay
+.. <- pigl returns assilkay
+assilkay
+STk> (pigl 'dfghta)
+.. -> pigl with wd = dfghta
+.... -> pigl with wd = fghtad
+...... -> pigl with wd = ghtadf
+........ -> pigl with wd = htadfg
+.......... -> pigl with wd = tadfgh
+............ -> pigl with wd = adfght
+............ <- pigl returns adfghtay
+.......... <- pigl returns adfghtay
+........ <- pigl returns adfghtay
+...... <- pigl returns adfghtay
+.... <- pigl returns adfghtay
+.. <- pigl returns adfghtay
+adfghtay
+STk> (transcript-off)
