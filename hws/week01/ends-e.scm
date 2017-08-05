@@ -1,0 +1,6 @@
+(define (ends-e s)
+  (if (empty? s)
+	  '()
+	  (if (equal? (last (first s)) 'e)
+		  (se (first s) (ends-e (bf s)))
+		  (se (ends-e (bf s))))))
