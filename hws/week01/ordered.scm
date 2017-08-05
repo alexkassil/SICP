@@ -1,0 +1,5 @@
+(define (ordered? s)
+  (cond ((empty? s) #t)
+		((empty? (bf s)) #t)
+		((> (first s) (first (bf s))) #f)
+		(else (ordered? (bf s)))))
