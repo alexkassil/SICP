@@ -40,3 +40,4 @@
 	deck
     	(move-card deck '() (random size)) ))
   (shuffle (make-ordered-deck) 52) )
+

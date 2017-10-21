@@ -106,6 +106,9 @@
 		(f x))
       (compose f (repeated f (- times 1)))))
 
+;;; 1.46
+
+
 
 
 
