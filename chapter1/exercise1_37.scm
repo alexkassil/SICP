@@ -10,8 +10,8 @@
   (if (= k 0)
       (/ (N k) (D k))
       (/ (N k) (+ (D k)
-		  (cont-frac N D (- k 1))))))q
-:q
+		  (cont-frac N D (- k 1))))))
+
 
 
 ; Approximates 1/phi to 4 decimal places (.6180)
