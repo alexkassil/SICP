@@ -22,7 +22,7 @@
 
 
 (fib 8)
-
+(fib 10000000)
 ; p = 0 q = 1
 ; a = bq + aq + ap -> a = b + a
 ; b = bp + aq      -> b = a
