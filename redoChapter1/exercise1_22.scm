@@ -71,3 +71,16 @@
 ; 3.91
 (/ 43.93  13.91)
 ; 3.15
+
+(sqrt 10)
+; 3.162
+; Increase in 10x results in a ~ sqrt(10) increase in time
+
+
+
+
+
+
+
+
+
