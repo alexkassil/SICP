@@ -32,6 +32,9 @@
 (fast-prime? 561 1)
 (fast-prime? 1105 1)
 (fast-prime? 1729 1)
+; These all (sadly) return true
+
+
 
 
 
