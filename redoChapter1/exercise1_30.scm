@@ -14,3 +14,9 @@
 (sum (lambda (x) (* x x x)) (lambda (x) (+ x 1)) 0 10)
 
 (sum (lambda (x) (/ 8.0 (* x (+ x 2)))) (lambda (x) (+ x 4)) 1 10000000)
+
+
+
+
+
+
