@@ -6,7 +6,13 @@
 
 (define (make-rat n d)
   (lambda (y)
-    (if y n d)))
+    (let ((g (gcd n d)))
+	  (if y (/ n g) (/ d g)))))
+
+(define (gcd a b)
+  (if (= b 0)
+      a
+      (gcd b (remainder a b))))
 
 (define (numer x)
   (x #t))
@@ -52,6 +58,20 @@
   (display (numer x))
   (display "/")
   (display (denom x)))
+
+(define one-half (make-rat 1 2))
+(define one-third (make-rat 1 3))
+(define seven-twelths (mul-rat (make-rat 7 1) (mul-rat one-half (mul-rat one-half one-third))))
+(define twelve-sevenths (div-rat (make-rat 10 10) seven-twelths))
+
+(print-rat one-half)
+(print-rat one-third)
+(print-rat seven-twelths)
+(print-rat twelve-sevenths)
+
+
+
+
 
 
 
